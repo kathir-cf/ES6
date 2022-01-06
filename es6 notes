@@ -1,0 +1,232 @@
+ES6
+
+let, const - blocked scoped
+arrow functions -
+class
+destructuring
+import and export
+default parameter
+spread  and Rest operator
+
+arrow functions -
+
+	
+	1. use it as an arg of other function
+	2. multiple implmentation we can give
+	3. readability and less code
+	4. usage of 'this' keyword
+
+function add(var x, var y){
+
+}
+
+let add=function(var x, var y){
+
+}
+
+arrow functions:
+
+let add=(x,y)=>{ //expression};
+
+
+example:
+
+	let add=(a,b)=> a+b;
+	
+	how to call? -> var result=add(1,2);
+
+
+	let evenOrOdd=(n)=> {
+		if(n%2==0)
+			return "number is even";
+		else
+			return "number is odd";
+	}
+	evenOrOdd(9);
+	
+
+
+	let process=(n)=> {
+		int c=n+90;
+		int d=c/23;
+		int e=d-7;
+		return e;
+	}
+	process(9);
+
+class Employee{
+
+	constructor(name)
+	{
+	 this.name=name;
+	 console.log('object created '+name);
+	}
+}
+//Employee e=new Employee('ajay');?? why error in iusing class name in LHS
+
+//constructor function
+function Employee(){
+	this.name='ajay';	
+	//functions
+	this.display=function(){ console.log('displayed');}
+}
+
+
+can v create an object of abv function? yes
+
+let ob=new Employee();
+
+
+class Employee{
+
+	constructor(name)
+	{
+	 this.name=name;
+	 console.log('object created '+name);
+	}	
+	display()
+	{
+	 console.log(this);
+	}
+}
+
+find out?
+// use strict
+// getter and setters
+// hoisting a class
+
+Destructuring: assigning array values and obj properties to distinct variables
+
+
+class Vehicle{
+	constructor(name,price)
+	{
+	this.name=name;
+	this.price=price;
+	}
+}
+
+let v=new Vehicle('tata',20000);
+
+let n=v.name;
+let p=v.price;
+
+or
+
+let {n,p}=v;
+console.log(n);
+console.log(p);
+
+if it is array? destructure?
+
+let a=[2,3,4,6,33,65];
+ 
+let [b,c,d]=a;
+b shud take 4
+c -> 6
+d=65
+
+let [,,b,c,,d]=a;
+
+reassigning/ modifying  a value in array: 
+
+let a=[2,3,4,6,33,65];
+undefined
+a[2]=90
+90
+a
+(6) [2, 3, 90, 6, 33, 65]
+
+using default values while destructuring:
+
+let a=[2,3,4,6,33];
+
+let [,b,,c,,d=8000]=a;
+
+
+let a=[2,3,4,6,33];
+
+let [,b,,c,,d=8000]=a;
+
+d
+8000
+let a=[2,3,4,6,33,65];
+
+let [,b,,c,,d=8000]=a;
+
+d
+65
+
+Rest Parameter:
+================
+	syntax:
+		function sell(a,...arr){ }
+
+	arr is rest parameter
+	arr is like an array
+	arr can take zero input or indefinite input
+	
+
+ex:
+
+	function add2(a,b,...c){
+		console.log(a);
+		console.log(b);
+			
+		for(var i of c)
+		 console.log(i);
+		
+	}	
+
+
+	add2(1,2,3,4,4,55,66);
+
+rest should be only last parameter in method definition.
+
+
+
+task:
+	From abov code snippet,get the value of c and use array destructuring 
+	and assign it to seperate variable and print them
+
+Spread operator:
+
+	expands an array into its element
+	spread operator is opposite to rest parameter
+	
+
+	ex:
+
+	function details(x,y,z){
+		console.log(x);
+		console.log(y);
+		console.log(z);
+	}
+
+	let numb=[2,4,3,5,77,34,66];
+	details(...numb);
+
+what abt 5,77,34,66?
+
+	function details(x,y,z,...rem){
+		console.log(x);
+		console.log(y);
+		console.log(z);
+		console.log(rem);
+	}
+
+	let numb=[2,4,3,5,77,34,66];
+	details(...numb);
+
+default parameter:
+
+function f(a=90,b=90){
+		console.log(a);
+		console.log(b);
+	}
+	f();
+VM1185:2 90
+VM1185:3 90
+
+
+import and export:

@@ -1,0 +1,77 @@
+React:
+
+strongly typed environment:
+
+datatype usage
+
+Typescript is a super set of JS 
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2Fgeekculture%2Ftypescript-vs-javascript-e5af7ab5a331&psig=AOvVaw2zk_IUtB_l_ukd7SumvaXw&ust=1641630170500000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOD5-4ubn_UCFQAAAAAdAAAAABAO
+
+advantage of TS:
+
+    strongly types environment
+    interfaces
+    generics
+    
+TS = strongly + loosely typed;
+
+Can a browser understand TS? No
+
+how can u make browser to understand TS? 
+
+
+
+transpilers->  A transpiler is a source-to-source compiler
+		
+
+Babel(7), TypeScript and CoffeeScript
+
+In react: 
+	react code-----transpiler(babel)---->es6
+
+how es6 is understood by browser?
+
+	Js VM ---> Chrome - V8
+	Js VM ---> SpiderMonkey - V8
+	Js VM ---> Edge - Chakra	
+	Js VM ---> safari - javascriptCore / nitro
+	
+
+React - A JavaScript library for building user interfaces
+	"view"  from MVC
+	many 3rd party lib support 
+
+
+SPA:
+=====
+An SPA (Single-page application) is a web app implementation that loads 
+only a single web document, and then updates the body content of that single 
+document via JavaScript APIs such as XMLHttpRequest and Fetch when different
+content is to be shown.
+	
+
+Using React - SPA?
+
+	makes use of Component Based Architecture for building SPA
+
+Component Based Architecture:
+
+		In react every thing is component
+
+Virtual Dom:
+==============
+		
+The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”,
+representation of a UI is kept in memory and synced with the “real” DOM by a library 
+such as ReactDOM. This process is called reconciliation.
+
+Its different from showding.
+
+Fiber is the new reconciliation engine in React 16. 
+Its main goal is to enable incremental rendering of the virtual DOM
+
+JSX:
+
+
+https://learn.co/lessons/react-create-element
+
